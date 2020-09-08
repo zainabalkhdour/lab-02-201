@@ -1,0 +1,23 @@
+html {
+    background: url(..//img/bk.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.content{
+    background-color: rgb(228, 210, 228);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    height: 800px;
+    width: 500px;
+    margin: 0 auto;
+
+}
+.profile_pic
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+
+}
