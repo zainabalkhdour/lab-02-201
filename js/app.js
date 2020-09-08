@@ -2,9 +2,6 @@
 var userInput = prompt("what is your name?")
 alert("welcome"+userInput)
 
-'use strict'
-var userInput = prompt("what is your name?")
-alert("welcome"+userInput)
 
   "yes"== true;
   "y"== true ;
