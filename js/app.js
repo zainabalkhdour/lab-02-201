@@ -9,7 +9,7 @@ alert("welcome"+userInput)
              "n"== false
 
 var q1 = prompt("Do I like to do sports?(yes/no)")
-if (q1.toLocaleLowerCase()=="yes")
+if (q1.toLocaleLowerCase()==="yes")
 {
         alert("right answer")
         console.log("right")
@@ -23,7 +23,7 @@ else
 }
 
 var q2 = prompt("My favorit food is mansaf")
-if(q2.toLocaleLowerCase()=="yes")
+if(q2.toLocaleLowerCase()==="yes")
 {
     alert("right answer")
     console.log("right")
@@ -37,7 +37,7 @@ else
 }
 
 var q3 = prompt("Am I a bad singer?")
-if(q3.toLocaleLowerCase()=="yes")
+if(q3.toLocaleLowerCase()==="yes")
 {
     alert("wrong answer")
     console.log("wrong")
@@ -51,7 +51,7 @@ else{
 
 
 var q4 = prompt("Do I hate winter")
-if (q4.toLocaleLowerCase()=="yes")
+if (q4.toLocaleLowerCase()==="yes")
 {
         alert("wrong answer")
         console.log("wrong")
@@ -65,7 +65,7 @@ else
 }
 
 var q5 = prompt("Am I a good coocker?")
-if (q5.toLocaleLowerCase()=="yes")
+if (q5.toLocaleLowerCase()==="yes")
 {
         alert("right answer")
         console.log("right")
