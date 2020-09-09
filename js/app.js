@@ -118,7 +118,7 @@ var hoppies = ["singing","reading","dancing","coocking","kickboxing"];
 var numberoftrail=0;
 while( numberoftrail < 6) {
     debugger;
-   var q7 = prompt("Guess type one of my hoppies ").toLowerCase();
+   var q7 = prompt("Guess one of my hoppies ").toLowerCase();
    var result= true;
    for(var j = 0 ;j<hoppies.length ;j++){
       
