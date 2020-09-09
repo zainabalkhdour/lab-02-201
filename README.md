@@ -8,4 +8,5 @@ The webpage main titles :
 * My Experiences :
 * My Goals
 * My 10 top books 
+* we did pair programming section ,diala was the navigator and zainab is the driver ,we edit the js cofes and convert all logics into functions.
 

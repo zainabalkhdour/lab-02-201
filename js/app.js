@@ -1,18 +1,15 @@
 'use strict'
-var numberofcorrectanswoer= 0;
+var counter= 0;
 
 var userInput = prompt("what is your name?")
 alert("welcome"+userInput)
 
-  "yes"== true;
-  "y"== true ;
-      "no"==false;
-     "n"== false
 
-var q1 = prompt("Do I like to do sports?(yes/no)")
+function sports() {
+    var q1 = prompt("Do I like to do sports?(yes/no)")
 if (q1.toLocaleLowerCase()=="yes")
 {
-    numberofcorrectanswoer++;
+    counter++;
         alert("right answer")
         console.log("right")
 }
@@ -24,10 +21,16 @@ else
 
 }
 
-var q2 = prompt("My favorit food is mansaf")
+}
+sports();
+
+//------------------------------------------------------------------------------------------
+
+function food() {
+    var q2 = prompt("My favorit food is mansaf")
 if(q2.toLocaleLowerCase()=="yes")
 {
-    numberofcorrectanswoer++;
+    counter++;
     alert("right answer")
     console.log("right")
 
@@ -38,25 +41,34 @@ else
     console.log("wrong")
 
 }
+}
+food();
+//------------------------------------------------------------------------------------------
 
-var q3 = prompt("Am I a bad singer?")
-if(q3.toLocaleLowerCase()=="yes")
-{
+function singer() {
     
-    alert("wrong answer")
-    console.log("wrong")
-
+    var q3 = prompt("Am I a bad singer?")
+    if(q3.toLocaleLowerCase()=="yes")
+    {
+        
+        alert("wrong answer")
+        console.log("wrong")
+    
+    }
+    else{
+    
+        counter++;
+        alert("right answer")
+        console.log("right")
+    
+    }
 }
-else{
+ singer();
 
-    numberofcorrectanswoer++;
-    alert("right answer")
-    console.log("right")
+ //------------------------------------------------------------------------------------------
 
-}
-
-
-var q4 = prompt("Do I hate winter")
+function winter() {
+    var q4 = prompt("Do I hate winter")
 if (q4.toLocaleLowerCase()=="yes")
 {
         alert("wrong answer")
@@ -64,16 +76,22 @@ if (q4.toLocaleLowerCase()=="yes")
 }
 else 
 {
-    numberofcorrectanswoer++;
+    counter++;
     alert("right answer")
     console.log("right")
 
 }
+}
+winter();
 
-var q5 = prompt("Am I a good coocker?")
+//------------------------------------------------------------------------------------------
+
+
+function cooker(params) {
+    var q5 = prompt("Am I a good cooker?")
 if (q5.toLocaleLowerCase()=="yes")
 {
-    numberofcorrectanswoer++;
+    counter++;
         alert("right answer")
         console.log("right")
 }
@@ -84,72 +102,86 @@ else
     console.log("wrong")
 
 }
+}
+cooker();
+//------------------------------------------------------------------------------------------
 
-
-
-var numberOftrial= 0; 
-while(numberOftrial <4){
-    var q6 = parseInt(prompt("My age is :"));
-    if(q6==23){
-        alert("your answer is true ");
-        numberofcorrectanswoer++;
-        break;
+function age() {
+    var numberOftrial= 0; 
+    while(numberOftrial <4){
+        var q6 = parseInt(prompt("My age is :"));
+        if(q6==23){
+            alert("your answer is true ");
+            counter++;
+            break;
+        }
+         else if(q6<23){
+            alert("your answer is too low ");
+            numberOftrial++;
+         }
+         else if(q6>23){
+            alert("your answer is too high  ");
+            numberOftrial++;
+         }
+         if(numberOftrial ==3){
+            alert(" OUT OF CHANCES "); 
+            break;
+       
+         }
+        
     }
-     else if(q6<23){
-        alert("your answer is too low ");
-        numberOftrial++;
-     }
-     else if(q6>23){
-        alert("your answer is too high  ");
-        numberOftrial++;
-     }
-     if(numberOftrial ==3){
-        alert(" OUT OF CHANCES "); 
-        break;
-   
-     }
     
 }
 
+age();
+
+//------------------------------------------------------------------------------------------
 
 
-var hoppies = ["singing","reading","dancing","coocking","kickboxing"];
-
-var numberoftrail=0;
-while( numberoftrail < 6) {
-    debugger;
-   var q7 = prompt("Guess one of my hoppies ").toLowerCase();
-   var result= true;
-   for(var j = 0 ;j<hoppies.length ;j++){
+function hobbies() {
+    
+    
+    var hobbies = ["singing","reading","dancing","coocking","kickboxing"];
+    
+    var numberoftrail=0;
+    while( numberoftrail < 6) {
+        debugger;
+       var q7 = prompt("Guess one of my hobbies ").toLowerCase();
+       var result= true;
+       for(var j = 0 ;j<hobbies.length ;j++){
+          
+        if(q7==hobbies[j]){
+            result= true;
+         break;
+        }else{
+            result=false;
+        }
+       }
+    
+     if(result==true){
+        alert("you are totaly right "+q7+"is one of my hobbies ");
+        counter++;
+        break;
+    
+     }
+       if(result===false){
+        alert(q7+"is not one of my hobbies ");
+       }
       
-    if(q7==hoppies[j]){
-        result= true;
-     break;
-    }else{
-        result=false;
+    
+       if(numberoftrail ==5){
+        alert("OUT OF CHANCES ");
+    
+        }
+    numberoftrail++;
+    
     }
-   }
-
- if(result==true){
-    alert("you are totaly right "+q7+"is one of my hoppies ");
-    numberofcorrectanswoer++;
-    break;
-
- }
-   if(result===false){
-    alert(q7+"is not one of my hoppies ");
-   }
-  
-
-   if(numberoftrail ==5){
-    alert("OUT OF CHANCES ");
-
-    }
-numberoftrail++;
-
 }
+hobbies();
+
+//------------------------------------------------------------------------------------------
 
 alert("the possible correct answers are["+"singing"+","+"reading"+","+"dancing"+","+"coocking"+","+"kickboxing"+"]")
-alert("Your result is "+numberofcorrectanswoer++ +"/7")
+alert("Your result is "+counter++ +"/7")
  
 
